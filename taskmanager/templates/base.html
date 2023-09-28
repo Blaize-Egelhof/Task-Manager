@@ -6,35 +6,27 @@
     <!-- Compiled and minified CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <link rel="stylesheet" href="{{url_for('static', filename = 'css/style.css')}}">
-    <title>Task Manager
+    <title>Task Manager</title>
 </head>
 <body>
-    <header>
-         <!-- This is for Bigger screen sizes -->
-        <nav class = "light-blue-darken-1">
-            <div class="nav-wrapper">
-              <a href="{{url_for('home')}}" class="brand-logo">Task Manager</a>
-              <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
-              <ul class="right hide-on-med-and-down">
-                <li><a href="{{url_for('home')}}">Home</a></li>
-                <li><a href="#">New Task</a></li>
-                <li><a href="#">All Categories</a></li>
-              </ul>
-            </div>
-        </nav>
-        <!-- This is for Mobile -->
-          <ul class="sidenav" id="mobile-demo">
-            <li><a href="{{url_for('home')}}">Home</a></li>
-            <li><a href="#">New Task</a></li>
-            <li><a href="#">All Categories</a></li>
-          </ul>
+  <nav class="light-blue darken-1">
+    <div class="nav-wrapper">
+    <a href="{{ url_for('home') }}" class="brand-logo">Task Manager</a>
+    <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="fas fa-bars"></i></a>
+    <ul class="right hide-on-med-and-down">
+        <li><a href="{{ url_for('home') }}">Home</a></li>
+        <li><a href="">New Task</a></li>
+        <li><a href="{{ url_for('categories') }}">Categories</a></li>
+    </ul>
+    </div>
+</nav>
     </header>
-    <main class = "container">
-        {% block content %}
-        {% endblock %}
+    <main class="container">
+      {% block content %}
+      {% endblock %}
     </main>
 
-    <footer class="page-footer">
+    <footer class="page-footer blue darken-3">
         <div class="container">
           <div class="row">
             <div class="col l6 s12">
@@ -45,16 +37,13 @@
               <h5 class="white-text">Links</h5>
               <ul>
                 <li><a class="grey-text text-lighten-3" href="#!">Link 1</a></li>
-                <li><a class="grey-text text-lighten-3" href="#!">Link 2</a></li>
-                <li><a class="grey-text text-lighten-3" href="#!">Link 3</a></li>
-                <li><a class="grey-text text-lighten-3" href="#!">Link 4</a></li>
               </ul>
             </div>
           </div>
         </div>
         <div class="footer-copyright">
           <div class="container">
-          © 2014 Copyright Text
+          © 2023 Copyright Text
           <a class="grey-text text-lighten-4 right" href="#!">More Links</a>
           </div>
         </div>
@@ -63,5 +52,6 @@
     <!-- Compiled and minified JavaScript -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <script rel="stylesheet" href="{{url_for('static', filename = 'js/script.css')}}"></script>
+    <script src="https://kit.fontawesome.com/e5d47f9c86.js" crossorigin="anonymous"></script>
 </body>
 </html>
