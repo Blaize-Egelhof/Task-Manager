@@ -15,7 +15,7 @@ else:
     uri = os.environ.get("DATABASE_URL")
     if uri.startswith("postgres://"):
         uri = uri.replace("postgres://", "postgresql://", 1)
-    app.config["postgres://zfhuutds:GDNiI3l1nvj_1dwNpoyiPoBsDn1Cy0NT@silly.db.elephantsql.com/zfhuutds"] = uri
+    app.config["SQLALCHEMY_DATABASE_URI"] = uri
 
 db = SQLAlchemy(app)
 
